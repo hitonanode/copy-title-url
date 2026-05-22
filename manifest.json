@@ -1,0 +1,14 @@
+{
+  "manifest_version": 3,
+  "name": "Copy Title URL",
+  "version": "1.0.0",
+  "description": "Copy the current tab title and URL as a Markdown link.",
+  "minimum_chrome_version": "109",
+  "permissions": ["activeTab", "clipboardWrite", "offscreen"],
+  "action": {
+    "default_title": "Copy title and URL"
+  },
+  "background": {
+    "service_worker": "background.js"
+  }
+}
