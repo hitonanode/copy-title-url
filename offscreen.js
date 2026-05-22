@@ -20,15 +20,6 @@ async function writeTextToClipboard(text) {
     throw new TypeError("Clipboard text must be a string.");
   }
 
-  if (navigator.clipboard?.writeText) {
-    try {
-      await navigator.clipboard.writeText(text);
-      return;
-    } catch (error) {
-      console.warn("navigator.clipboard.writeText failed; trying fallback.", error);
-    }
-  }
-
   const textarea = document.createElement("textarea");
   textarea.value = text;
   textarea.setAttribute("readonly", "");
